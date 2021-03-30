@@ -15,7 +15,9 @@
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
     <div class="row">
         <div class="col-lg-6">
+
             <div id="graph1"></div>
+            <button type="button" class="btn btn-info" onclick="setData(1)">ChangeColor</button>
             <div id="graph2"></div><br/>
         </div>
         <div class="col-lg-6">
@@ -26,3 +28,28 @@
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
+<!--
+1. Since my boss wants to know how many games are played in a year I counted all the games played from year 2000
+2004. Every type of competition and friendly games were counted.
+My boss wanted to know the top winning nations. For this I divided the number of games a team has won with the total
+number of games they have played. Again all competitions and friend;y games were included.
+I am trying to bet which team will win the next world cup. For this I looked at the games teams have played in the last 2 World
+Cups and divided the number of games won to total number of games played in the 2014 and 2018 World Cups
+2. 1) It makes it easy to compare the different values ,for example we can directly see the relative difference between
+the games played in each year, when using bar charts.
+  2) It makes it easy to customize what I want to show, I wanted to add a button to change the bar colors and a hover effect
+  to the piechart so we can visualize the winning percentages. With d3 I have the chance to make these customizations.
+  3) It makes it easy to to use different charts in the same visualizatiion, for example I chose to have a bar chart and a
+  piechart to present my findings, thanks to d3 I had this option.
+3. 1) Although you have less customization options using softwares like matplotlib require less code.
+   2) D3 may not work with older browser versions.
+   3) Compared to some other options D3 has a longer learning curve.
+4. I tried to make my data visualization as accessible as possible, by choosing colors that are easy on the eyes and are friendly
+for color blind people. I also added a button to change the blue bars to red if the user prefers a different color. As stated in
+the "Why Accessibility is at the Heart of Visualization", there can of course be done improvements to the visualization in terms of
+assistive technology. For example adding a screen reader that not only reads the texts but also describes the visuals to a visually
+impaired user may close the gap between the experience different people get from viewing this visuilzation.
+5. I could have added more options in terms of changing colors and maybe even the size of the texts and graphs for people who need larger
+visuals or brighter colors. Although there is always room for improvement the graphs I displayed would reach the goal of
+visualizing the data to my boss. 
+-->
